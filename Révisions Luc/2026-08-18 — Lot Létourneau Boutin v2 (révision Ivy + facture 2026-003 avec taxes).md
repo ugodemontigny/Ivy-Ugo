@@ -17,3 +17,16 @@
 
 - 🟠 Les numéros TPS/TVQ proviennent de la facture 2026-001 ; la note interne de cette facture demandait de les **valider une fois au Registre TPS/TVH (ARC) et dans Mon dossier (Revenu Québec)**. Si cette validation a été faite avant l'envoi des factures d'août, rien à faire ; sinon, la faire avant d'envoyer la 2026-003.
 - Rappel séquence (Ivy) : contrat signé d'abord, facture ensuite — redater la facture au jour réel de l'envoi.
+
+## Addendum — vigilance 🟠 levée (18 août, confirmation d'Ugo + contre-vérification)
+
+Ugo confirme que les numéros de taxes sont validés. Contre-vérification faite dans les DEUX factures émises :
+
+| Donnée | Facture 2026-001 (CCSOP Portneuf, xlsx) | Facture 2026-002 (CCI Laval, xlsx + PDF) | Facture 2026-003 (Létourneau Boutin, ébauche) |
+|---|---|---|---|
+| NEQ | 2282347915 | 2282347915 | 2282347915 ✓ |
+| N° TPS | 764992772RT0001 | 764992772RT0001 | 764992772RT0001 ✓ |
+| N° TVQ | 4036241891TQ0001 | 4036241891TQ0001 | 4036241891TQ0001 ✓ |
+| Adresse / tél. | 2660, av. Wilbrod, Québec G1E 3P5 · 1 581 993-8763 | idem | idem ✓ |
+
+Numérotation vérifiée : 2026-001 = Portneuf (datée 2026-08-11 au fichier), 2026-002 = Laval (datée 2026-08-10) → **2026-003 est le prochain numéro, séquence cohérente.** Verdict : 🟢 sans réserve.
