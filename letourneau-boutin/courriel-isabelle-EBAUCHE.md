@@ -4,7 +4,7 @@ Objet : Questionnaire découverte IA — anonyme, à votre rythme
 
 Bonjour Isabelle,
 
-Je suis Ugo de Montigny, formateur en IA pour les PME; c'est moi qui accompagne le cabinet dans la démarche que Jennifer vous a présentée. Le but est de trouver comment vous faire gagner du temps sur les tâches répétitives — rien d'autre.
+Je suis Ugo de Montigny, formateur en IA pour les PME; c'est moi qui accompagne le cabinet dans la démarche que Jennifer vous a présentée. Le but est de trouver comment vous faire gagner du temps sur les tâches répétitives afin de vous en libérer pour autre chose.
 
 Voici le questionnaire (environ 12 questions, 10 à 12 minutes, dans vos mots) : [LIEN-FORMULAIRE]
 

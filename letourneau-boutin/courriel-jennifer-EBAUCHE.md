@@ -4,7 +4,7 @@ Objet : RE : Suivi du pilote — envoi aux employées, facture et contrat
 
 Bonjour Jennifer,
 
-Merci pour votre message de ce matin et pour les adresses d'Isabelle et de Julie. Je leur écris cette semaine avec le lien du questionnaire, en leur proposant — comme convenu — de me répondre depuis une adresse personnelle pour préserver la confidentialité.
+Merci pour votre message de ce matin et pour les adresses d'Isabelle et de Julie. Je leur écris un peu plus tard aujourd'hui ou demain matin avec le lien du questionnaire, en leur proposant — comme convenu — de me répondre depuis une adresse personnelle pour préserver la confidentialité.
 
 Vous répondez aussi au questionnaire, avec votre propre code répondant — voici votre lien : [LIEN-FORMULAIRE] (écrivez-moi un mot avant de commencer et je vous envoie votre code). J'écris directement à Pierre-Luc de son côté. Petite précision : je ne partagerai que des constats d'ensemble, jamais les réponses individuelles — c'est ce qui permet à chacun de répondre en toute franchise.
 
