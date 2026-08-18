@@ -8,7 +8,7 @@ Merci pour votre message de ce matin et pour les adresses d'Isabelle et de Julie
 
 Vous recevrez aussi le lien pour vous-même et pour Pierre-Luc : vous répondez tous les deux au questionnaire, chacun avec votre propre code répondant. Petite précision : je ne partagerai que des constats d'ensemble, jamais les réponses individuelles — c'est ce qui permet à chacun de répondre en toute franchise.
 
-La facture du pilote (200 $, tel qu'entendu) et l'ébauche de contrat suivent en pièces jointes pour votre révision. Prenez le temps qu'il vous faut pour les regarder.
+La facture du pilote (200 $ tel qu'entendu, plus les taxes) et l'ébauche de contrat suivent en pièces jointes pour votre révision, avec mes coordonnées bancaires pour le dépôt direct. Prenez le temps qu'il vous faut pour les regarder.
 
 N'hésitez pas à me joindre si vous avez des questions.
 

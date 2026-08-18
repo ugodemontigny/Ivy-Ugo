@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Facture 2026-001 — IA avec Ugo (ÉBAUCHE)</title>
+<title>Facture 2026-003 — IA avec Ugo (ÉBAUCHE)</title>
 <style>
   :root { color-scheme: light; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,19 +33,22 @@
     padding: 0.4rem 0.75rem;
     margin-bottom: 2rem;
   }
-  header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem; }
-  h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
-  .brand p, .meta p, .billto p { font-size: 0.95rem; }
+  header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.5rem; }
+  h1 { font-size: 1.25rem; margin-bottom: 0.25rem; }
+  .brand p, .meta p, .billto p, .ids p { font-size: 0.92rem; }
+  .ids { margin-bottom: 1.5rem; }
+  .ids p { color: #444; font-size: 0.85rem; }
   .meta { text-align: right; }
   .meta h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
-  .billto { margin-bottom: 2rem; }
+  .billto { margin-bottom: 1.5rem; }
   .billto h3, .terms h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666; margin-bottom: 0.35rem; }
+  .ref { font-size: 0.9rem; color: #444; margin-bottom: 1.5rem; }
   table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-size: 0.95rem; }
   th { text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: #666; border-bottom: 2px solid #1a1a1a; padding: 0.5rem 0.25rem; }
   th.num, td.num { text-align: right; white-space: nowrap; }
   td { padding: 0.75rem 0.25rem; border-bottom: 1px solid #e3e3e3; vertical-align: top; }
   tr.total td { border-bottom: none; border-top: 2px solid #1a1a1a; font-weight: 700; font-size: 1.05rem; }
-  tr.taxes td { font-size: 0.9rem; color: #333; }
+  tr.taxes td { font-size: 0.9rem; color: #333; padding: 0.45rem 0.25rem; }
   .terms ul { list-style: none; font-size: 0.95rem; }
   .terms li { margin-bottom: 0.3rem; }
   .thanks { margin-top: 2rem; font-size: 0.95rem; }
@@ -58,27 +61,34 @@
   @media print {
     body { background: #fff; padding: 0; }
     .page { border: none; max-width: none; padding: 1.5cm; }
+    .draft-banner, mark.note { display: none; }
   }
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="draft-banner">Ébauche — à réviser par Ugo avant envoi</div>
+  <div class="draft-banner">Ébauche — à réviser par Ugo avant envoi (le bandeau et les surlignés disparaissent à l'impression)</div>
 
   <header>
     <div class="brand">
-      <h1>IA avec Ugo</h1>
-      <p>Ugo de Montigny</p>
-      <p>iaavecugo@gmail.com</p>
-      <p><mark>[À CONFIRMER : adresse d'affaires d'Ugo]</mark></p>
-      <p><mark>[À CONFIRMER : téléphone d'affaires d'Ugo]</mark></p>
+      <h1>Ugo de Montigny, faisant affaires sous le nom «&nbsp;IA avec Ugo&nbsp;»</h1>
+      <p>Travailleur autonome — entreprise individuelle</p>
+      <p>2660, av. Wilbrod, Québec (Québec) G1E 3P5</p>
+      <p>iaavecugo@gmail.com · 1&nbsp;581&nbsp;993-8763</p>
     </div>
     <div class="meta">
       <h2>Facture</h2>
-      <p>Nº 2026-001 <mark>[À CONFIRMER : numérotation]</mark></p>
-      <p>Date : 18 août 2026<br><mark>[À CONFIRMER : Ugo peut préférer facturer à la fin du pilote]</mark></p>
+      <p>Nº 2026-003</p>
+      <p>Date : 18 août 2026 <mark>[À CONFIRMER : contrat signé d'abord — redater au jour réel de l'envoi]</mark></p>
+      <p>Échéance : 30 jours</p>
     </div>
   </header>
+
+  <section class="ids">
+    <p>NEQ (numéro d'entreprise du Québec)&nbsp;: 2282347915</p>
+    <p>N° de TPS (taxe sur les produits et services)&nbsp;: 764992772RT0001</p>
+    <p>N° de TVQ (taxe de vente du Québec)&nbsp;: 4036241891TQ0001</p>
+  </section>
 
   <section class="billto">
     <h3>Facturé à</h3>
@@ -88,6 +98,8 @@
     <p>St-Marc-des-Carrières (Québec) G0A 4B0</p>
     <p>jboutin@letourneauboutin.com — (418) 268-3940</p>
   </section>
+
+  <p class="ref"><strong>Référence&nbsp;:</strong> Projet pilote — démarche de découverte IA, proposition du 20 juillet 2026 acceptée par courriel.</p>
 
   <table>
     <thead>
@@ -102,12 +114,20 @@
         <td class="num">200,00&nbsp;$</td>
       </tr>
       <tr class="taxes">
-        <td>TPS/TVQ non applicables — fournisseur de petite taille <mark>[À CONFIRMER : statut fiscal d'Ugo ; si inscrit aux taxes, ajouter les numéros TPS/TVQ et les montants]</mark></td>
-        <td class="num">—</td>
+        <td>Sous-total</td>
+        <td class="num">200,00&nbsp;$</td>
+      </tr>
+      <tr class="taxes">
+        <td>TPS (5&nbsp;%)</td>
+        <td class="num">10,00&nbsp;$</td>
+      </tr>
+      <tr class="taxes">
+        <td>TVQ (9,975&nbsp;%)</td>
+        <td class="num">19,95&nbsp;$</td>
       </tr>
       <tr class="total">
-        <td>TOTAL</td>
-        <td class="num">200,00&nbsp;$</td>
+        <td>TOTAL À PAYER</td>
+        <td class="num">229,95&nbsp;$&nbsp;CAD</td>
       </tr>
     </tbody>
   </table>
@@ -115,8 +135,9 @@
   <section class="terms">
     <h3>Modalités de paiement</h3>
     <ul>
-      <li>Payable sur réception <mark>[À CONFIRMER]</mark></li>
-      <li>Par virement Interac à iaavecugo@gmail.com <mark>[À CONFIRMER]</mark></li>
+      <li>Paiement à 30 jours de la réception de la facture.</li>
+      <li>Virement Interac ou chèque à l'ordre de&nbsp;: Ugo de Montigny. · Montants en dollars canadiens ($&nbsp;CAD).</li>
+      <li>Dépôt direct&nbsp;: coordonnées bancaires en annexe (spécimen). <mark class="note">[NOTE UGO : joindre la photo du spécimen — la même qu'envoyée à la CCI Laval le 10 août]</mark></li>
     </ul>
   </section>
 

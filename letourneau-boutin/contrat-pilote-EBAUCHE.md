@@ -7,9 +7,10 @@
 ## 1. Parties
 
 **Le prestataire :**
-IA avec Ugo — Ugo de Montigny, travailleur autonome
-Courriel : iaavecugo@gmail.com
-[À CONFIRMER : adresse d'affaires d'Ugo]
+Ugo de Montigny, faisant affaires sous le nom « IA avec Ugo », travailleur autonome (entreprise individuelle)
+2660, av. Wilbrod, Québec (Québec) G1E 3P5
+Courriel : iaavecugo@gmail.com · Tél. : 1 581 993-8763
+NEQ : 2282347915
 
 **Le client :**
 Létourneau Boutin — Comptabilité & Fiscalité
@@ -31,9 +32,9 @@ Le prestataire réalise pour le client un projet pilote de **démarche de décou
 
 Le prix du pilote est un **montant forfaitaire de 200,00 $, tout inclus** : déplacements, repas et tous frais accessoires sont compris. Aucun autre frais ne sera facturé pour les services décrits à l'article 2.
 
-- TPS/TVQ : non applicables — petit fournisseur non inscrit [À CONFIRMER : statut fiscal d'Ugo ; si inscrit aux taxes, les taxes s'ajouteront au montant et les numéros seront indiqués sur la facture]
-- Facturation : une facture unique, payable sur réception [À CONFIRMER : moment de la facturation — au début ou à la fin du pilote]
-- Mode de paiement : virement Interac à iaavecugo@gmail.com [À CONFIRMER]
+- Le montant forfaitaire est **exclusif des taxes applicables** : la TPS (5 %) et la TVQ (9,975 %) s'ajoutent au montant. Le prestataire est inscrit aux fichiers de la TPS et de la TVQ (n° TPS 764992772RT0001, n° TVQ 4036241891TQ0001), et les numéros figurent sur la facture.
+- Facturation : une facture unique (2026-003), payable dans les 30 jours de sa réception [À CONFIRMER : moment de l'émission — à la signature ou à la fin du pilote]
+- Mode de paiement : virement Interac ou chèque à l'ordre de Ugo de Montigny; dépôt direct possible (coordonnées bancaires fournies en annexe de la facture).
 
 ## 4. Confidentialité et protection des renseignements personnels
 
