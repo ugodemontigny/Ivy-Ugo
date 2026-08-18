@@ -8,9 +8,9 @@ Je suis Ugo de Montigny, formateur en IA pour les PME; c'est moi qui accompagne 
 
 Voici le questionnaire (environ 12 questions, 10 à 12 minutes, dans vos mots) : [LIEN-FORMULAIRE]
 
-Côté confidentialité : vous répondez sous un code, jamais sous votre nom; aucune information sur les clients du cabinet n'est demandée; les réponses sont détruites au plus tard six mois après la collecte. Pour recevoir votre code, je vous propose de m'écrire depuis une adresse courriel personnelle — ainsi, personne au bureau ne peut relier un code à une personne. C'est proposé, jamais imposé.
+Côté confidentialité : vous répondez sous un code, jamais sous votre nom; aucune information sur les clients du cabinet n'est demandée; les réponses sont détruites au plus tard six mois après la collecte. Avant de commencer, écrivez-moi pour recevoir votre code répondant — idéalement d'une adresse courriel personnelle, pour que personne au bureau ne puisse relier un code à une personne. C'est proposé, jamais imposé : un mot depuis cette adresse-ci fonctionne aussi.
 
-Aucune urgence : c'est la période des vacances, répondez à votre rythme. N'hésitez pas à m'écrire si vous avez des questions.
+Aucune urgence : c'est la période des vacances, répondez à votre rythme.
 
 Bonne journée,
 

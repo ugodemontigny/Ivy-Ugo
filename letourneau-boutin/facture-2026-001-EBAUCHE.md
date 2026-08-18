@@ -27,7 +27,7 @@ jboutin@letourneauboutin.com — (418) 268-3940
 | | |
 |---|---:|
 | **Sous-total** | **200,00 $** |
-| TPS/TVQ | Non applicables — fournisseur de petite taille [À CONFIRMER : statut fiscal d'Ugo ; si inscrit aux taxes, ajouter les numéros TPS/TVQ et les montants] |
+| TPS/TVQ | Non applicables — petit fournisseur non inscrit [À CONFIRMER : statut fiscal d'Ugo ; si inscrit aux taxes, ajouter les numéros TPS/TVQ et les montants] |
 | **TOTAL** | **200,00 $** |
 
 ---

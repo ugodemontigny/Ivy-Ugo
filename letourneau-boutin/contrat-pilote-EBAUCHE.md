@@ -31,7 +31,7 @@ Le prestataire réalise pour le client un projet pilote de **démarche de décou
 
 Le prix du pilote est un **montant forfaitaire de 200,00 $, tout inclus** : déplacements, repas et tous frais accessoires sont compris. Aucun autre frais ne sera facturé pour les services décrits à l'article 2.
 
-- TPS/TVQ : non applicables — fournisseur de petite taille [À CONFIRMER : statut fiscal d'Ugo ; si inscrit aux taxes, les taxes s'ajouteront au montant et les numéros seront indiqués sur la facture]
+- TPS/TVQ : non applicables — petit fournisseur non inscrit [À CONFIRMER : statut fiscal d'Ugo ; si inscrit aux taxes, les taxes s'ajouteront au montant et les numéros seront indiqués sur la facture]
 - Facturation : une facture unique, payable sur réception [À CONFIRMER : moment de la facturation — au début ou à la fin du pilote]
 - Mode de paiement : virement Interac à iaavecugo@gmail.com [À CONFIRMER]
 
@@ -39,8 +39,8 @@ Le prix du pilote est un **montant forfaitaire de 200,00 $, tout inclus** : dép
 
 - Le prestataire respecte le secret professionnel du cabinet : **aucune donnée des clients du cabinet n'est demandée, consultée ni utilisée** dans le cadre du pilote.
 - Les cas-pilotes d'automatisation sont testés uniquement sur l'entreprise du prestataire, jamais sur les données du cabinet ni de ses clients.
-- Les réponses au questionnaire de découverte sont **anonymisées par code répondant**; aucune réponse n'est associée nominativement à un membre de l'équipe.
-- Les réponses au questionnaire sont **détruites au plus tard 6 mois après la collecte**, conformément aux bonnes pratiques de la Loi 25 sur la protection des renseignements personnels.
+- Les réponses au questionnaire de découverte sont **recueillies sous code répondant**; la correspondance entre les codes et les personnes est conservée uniquement par le prestataire et n'est jamais communiquée au client. Le prestataire ne transmet au client que des constats d'ensemble; aucune réponse n'est associée nominativement à un membre de l'équipe.
+- Les réponses au questionnaire, ainsi que la liste de correspondance des codes, sont **détruites au plus tard 6 mois après la collecte**, conformément aux bonnes pratiques de la Loi 25 sur la protection des renseignements personnels.
 - Chaque partie s'engage à garder confidentielle toute information non publique obtenue de l'autre partie dans le cadre du pilote.
 
 ## 5. Propriété des livrables
