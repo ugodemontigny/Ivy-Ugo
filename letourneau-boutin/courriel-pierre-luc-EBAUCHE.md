@@ -1,4 +1,4 @@
-# ÉBAUCHE — Courriel à Pierre-Luc Boutin (letourneau.boutin@gmail.com)
+# ÉBAUCHE — Courriel à Pierre-Luc Boutin (plboutin@letourneauboutin.com)
 
 Objet : Questionnaire découverte IA — ton lien à toi aussi
 
@@ -8,7 +8,7 @@ La démarche avance : Jennifer m'a donné le feu vert ce matin et j'écris à Is
 
 Toi aussi tu y réponds — la vue du propriétaire compte autant que celle de l'équipe, et c'est souvent là que les écarts intéressants ressortent. Voici le lien (une douzaine de questions, 10 à 12 minutes, dans tes mots) : [LIEN-FORMULAIRE]
 
-Comme pour tout le monde, tu réponds sous un code répondant : écris-moi un mot avant de commencer et je te l'envoie — d'une adresse personnelle si tu préfères, puisque la boîte letourneau.boutin est partagée au bureau.
+Comme pour tout le monde, tu réponds sous un code répondant : écris-moi un mot avant de commencer et je te l'envoie — d'une adresse personnelle si tu préfères, c'est la même mécanique pour toute l'équipe.
 
 Rien ne presse : à ton rythme, l'été passe en premier.
 

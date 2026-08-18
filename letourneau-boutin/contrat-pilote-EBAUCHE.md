@@ -33,7 +33,7 @@ Le prestataire réalise pour le client un projet pilote de **démarche de décou
 Le prix du pilote est un **montant forfaitaire de 200,00 $, tout inclus** : déplacements, repas et tous frais accessoires sont compris. Aucun autre frais ne sera facturé pour les services décrits à l'article 2.
 
 - Le montant forfaitaire est **exclusif des taxes applicables** : la TPS (5 %) et la TVQ (9,975 %) s'ajoutent au montant. Le prestataire est inscrit aux fichiers de la TPS et de la TVQ (n° TPS 764992772RT0001, n° TVQ 4036241891TQ0001), et les numéros figurent sur la facture.
-- Facturation : une facture unique (2026-003), payable dans les 30 jours de sa réception [À CONFIRMER : moment de l'émission — à la signature ou à la fin du pilote]
+- Facturation : une facture unique (2026-003), émise à la signature du présent contrat et payable dans les 30 jours de sa réception.
 - Mode de paiement : virement Interac ou chèque à l'ordre de Ugo de Montigny; dépôt direct possible (coordonnées bancaires fournies en annexe de la facture).
 
 ## 4. Confidentialité et protection des renseignements personnels
@@ -54,7 +54,7 @@ La responsabilité totale du prestataire en lien avec ce contrat est limitée au
 
 ## 7. Résiliation
 
-Chaque partie peut mettre fin au contrat en tout temps, sur simple avis écrit (courriel suffisant). En cas de résiliation, les parties conviennent de bonne foi du traitement du montant forfaitaire selon l'avancement des travaux.
+Chaque partie peut mettre fin au contrat en tout temps, sur simple avis écrit (courriel suffisant). En cas de résiliation après le début des travaux, le montant forfaitaire est ajusté au prorata des étapes de l'article 2 déjà réalisées; toute somme payée en trop est remboursée, et les obligations de confidentialité et de destruction des données de l'article 4 subsistent.
 
 ## 8. Non-exclusivité
 
@@ -62,20 +62,30 @@ Ce contrat ne crée aucune exclusivité : chaque partie demeure libre de travail
 
 ## 9. Durée
 
-Durée indicative du pilote : [À CONFIRMER : calendrier — dates de début et de fin visées].
+Le contrat prend effet à sa signature. Le pilote se déroule à l'automne 2026; le calendrier précis des étapes est convenu entre les parties au fil de la démarche, en respectant le rythme des activités du cabinet (période des vacances comprise). Le contrat prend fin à la remise de la feuille de route et à la tenue du suivi sur place (étapes 5 et 6 de l'article 2), sous réserve des obligations de confidentialité et de destruction des données de l'article 4, qui subsistent.
 
-## 10. Signatures
+## 10. Dispositions générales
+
+- Le présent contrat constitue l'entente complète entre les parties pour le pilote et remplace les échanges antérieurs sur le même objet; la proposition du 20 juillet 2026 y demeure jointe à titre descriptif.
+- Toute modification se fait par écrit (courriel accepté) avec l'accord des deux parties.
+- Le contrat est régi par les lois applicables au Québec.
+
+## 11. Signatures
 
 Fait en deux exemplaires.
 
-**Pour IA avec Ugo :**
+**Pour le prestataire — IA avec Ugo :**
 
 Signature : _________________________
 Ugo de Montigny
 Date : _________________________
 
-**Pour Létourneau Boutin — Comptabilité & Fiscalité :**
+**Pour le client — Létourneau Boutin — Comptabilité & Fiscalité :**
 
 Signature : _________________________
-Nom : _________________________ [À CONFIRMER : signataire — Jennifer Boutin ou Pierre-Luc Boutin, copropriétaire]
+Jennifer Boutin, coordonnatrice du projet
+Date : _________________________
+
+Signature : _________________________
+Pierre-Luc Boutin, copropriétaire *(seconde signature — au choix du cabinet)*
 Date : _________________________
