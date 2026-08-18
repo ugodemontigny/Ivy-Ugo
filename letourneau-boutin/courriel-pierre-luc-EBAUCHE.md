@@ -6,7 +6,7 @@ Bonjour Pierre-Luc,
 
 La démarche avance : Jennifer m'a donné le feu vert ce matin et j'écris à Isabelle et à Julie cette semaine avec le questionnaire.
 
-Toi aussi tu y réponds — la vue du propriétaire compte autant que celle de l'équipe, et c'est souvent là que les écarts intéressants ressortent. Voici le lien (une douzaine de questions, 10 à 12 minutes, dans tes mots) : [LIEN-FORMULAIRE]
+Toi aussi tu y réponds — la vue du propriétaire compte autant que celle de l'équipe, et c'est souvent là que les écarts intéressants ressortent. Voici le lien (une douzaine de questions, 10 à 12 minutes, dans tes mots) : https://airtable.com/appQ72xtDfFJk1QP0/shrpJBESTdjtacbMq
 
 Comme pour tout le monde, tu réponds sous un code répondant : écris-moi un mot avant de commencer et je te l'envoie — d'une adresse personnelle si tu préfères, c'est la même mécanique pour toute l'équipe.
 
