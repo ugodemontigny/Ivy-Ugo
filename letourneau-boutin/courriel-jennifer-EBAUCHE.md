@@ -6,7 +6,7 @@ Bonjour Jennifer,
 
 Merci pour votre message de ce matin et pour les adresses d'Isabelle et de Julie. Je leur écris cette semaine avec le lien du questionnaire, en leur proposant — comme convenu — de me répondre depuis une adresse personnelle pour préserver la confidentialité.
 
-Vous recevrez aussi le lien pour vous-même et pour Pierre-Luc : vous répondez tous les deux au questionnaire, chacun avec votre propre code répondant. Petite précision : je ne partagerai que des constats d'ensemble, jamais les réponses individuelles — c'est ce qui permet à chacun de répondre en toute franchise.
+Vous répondez aussi au questionnaire, avec votre propre code répondant — voici votre lien : [LIEN-FORMULAIRE] (écrivez-moi un mot avant de commencer et je vous envoie votre code). J'écris directement à Pierre-Luc de son côté. Petite précision : je ne partagerai que des constats d'ensemble, jamais les réponses individuelles — c'est ce qui permet à chacun de répondre en toute franchise.
 
 La facture du pilote (200 $ tel qu'entendu, plus les taxes) et l'ébauche de contrat suivent en pièces jointes pour votre révision, avec mes coordonnées bancaires pour le dépôt direct. Prenez le temps qu'il vous faut pour les regarder.
 
