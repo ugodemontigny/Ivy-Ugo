@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facture 2026-001 — IA avec Ugo (ÉBAUCHE)</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #1a1a1a;
+    background: #f2f2f2;
+    line-height: 1.5;
+    padding: 2rem 1rem;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 3rem 3rem 2.5rem;
+    border: 1px solid #ddd;
+  }
+  .draft-banner {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8a6d00;
+    background: #fff3bf;
+    border: 1px dashed #c9a600;
+    padding: 0.4rem 0.75rem;
+    margin-bottom: 2rem;
+  }
+  header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem; }
+  h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+  .brand p, .meta p, .billto p { font-size: 0.95rem; }
+  .meta { text-align: right; }
+  .meta h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+  .billto { margin-bottom: 2rem; }
+  .billto h3, .terms h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666; margin-bottom: 0.35rem; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-size: 0.95rem; }
+  th { text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: #666; border-bottom: 2px solid #1a1a1a; padding: 0.5rem 0.25rem; }
+  th.num, td.num { text-align: right; white-space: nowrap; }
+  td { padding: 0.75rem 0.25rem; border-bottom: 1px solid #e3e3e3; vertical-align: top; }
+  tr.total td { border-bottom: none; border-top: 2px solid #1a1a1a; font-weight: 700; font-size: 1.05rem; }
+  tr.taxes td { font-size: 0.9rem; color: #333; }
+  .terms ul { list-style: none; font-size: 0.95rem; }
+  .terms li { margin-bottom: 0.3rem; }
+  .thanks { margin-top: 2rem; font-size: 0.95rem; }
+  mark {
+    background: #ffee58;
+    padding: 0.05em 0.25em;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { border: none; max-width: none; padding: 1.5cm; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="draft-banner">Ébauche — à réviser par Ugo avant envoi</div>
+
+  <header>
+    <div class="brand">
+      <h1>IA avec Ugo</h1>
+      <p>Ugo de Montigny</p>
+      <p>iaavecugo@gmail.com</p>
+      <p><mark>[À CONFIRMER : adresse d'affaires d'Ugo]</mark></p>
+      <p><mark>[À CONFIRMER : téléphone d'affaires d'Ugo]</mark></p>
+    </div>
+    <div class="meta">
+      <h2>Facture</h2>
+      <p>Nº 2026-001 <mark>[À CONFIRMER : numérotation]</mark></p>
+      <p>Date : 18 août 2026<br><mark>[À CONFIRMER : Ugo peut préférer facturer à la fin du pilote]</mark></p>
+    </div>
+  </header>
+
+  <section class="billto">
+    <h3>Facturé à</h3>
+    <p>Létourneau Boutin — Comptabilité &amp; Fiscalité</p>
+    <p>a/s Jennifer Boutin</p>
+    <p>1250, boulevard Bona-Dussault</p>
+    <p>St-Marc-des-Carrières (Québec) G0A 4B0</p>
+    <p>jboutin@letourneauboutin.com — (418) 268-3940</p>
+  </section>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th class="num">Montant</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Projet pilote — démarche de découverte IA (forfait tout inclus&nbsp;: déplacements, repas et frais accessoires compris)</td>
+        <td class="num">200,00&nbsp;$</td>
+      </tr>
+      <tr class="taxes">
+        <td>TPS/TVQ non applicables — fournisseur de petite taille <mark>[À CONFIRMER : statut fiscal d'Ugo ; si inscrit aux taxes, ajouter les numéros TPS/TVQ et les montants]</mark></td>
+        <td class="num">—</td>
+      </tr>
+      <tr class="total">
+        <td>TOTAL</td>
+        <td class="num">200,00&nbsp;$</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section class="terms">
+    <h3>Modalités de paiement</h3>
+    <ul>
+      <li>Payable sur réception <mark>[À CONFIRMER]</mark></li>
+      <li>Par virement Interac à iaavecugo@gmail.com <mark>[À CONFIRMER]</mark></li>
+    </ul>
+  </section>
+
+  <p class="thanks">Merci de votre confiance!</p>
+</div>
+</body>
+</html>
