@@ -161,6 +161,118 @@ sécurité et coûte énormément.
 
 ---
 
+## 6. Comparaison des options sous l'angle de la Loi 25
+
+Loi 25 = Loi modernisant des dispositions législatives en matière de
+protection des renseignements personnels (Québec). Pour une entreprise privée
+comme IA avec Ugo, les articles qui comptent sont ceux de la **Loi sur la
+protection des renseignements personnels dans le secteur privé (LPRPSP)**.
+Les articles cités ci-dessous sont ceux de la LPRPSP telle que modifiée.
+Vérifier le texte à jour sur legisquebec.gouv.qc.ca avant toute citation
+externe.
+
+### 6.1 Les obligations qui touchent directement ce projet
+
+| Article | Obligation | Impact sur le stockage / LLM |
+|---|---|---|
+| art. 3.1 | Responsable de la protection des renseignements personnels (RPRP) désigné, coordonnées publiées | Ugo par défaut. À nommer par écrit. |
+| art. 3.2 | Registre des incidents; notification à la CAI et aux personnes en cas d'incident présentant un risque de préjudice sérieux | Exige des journaux d'accès chez nous, pas seulement chez le fournisseur. |
+| art. 3.3 | ÉFVP pour tout projet d'acquisition, de développement ou de refonte d'un système d'information impliquant des renseignements personnels | La migration vers AWS et le déploiement d'un LLM sont **chacun** un projet visé. |
+| art. 3.5 | Confidentialité par défaut (paramètres les plus protecteurs) | Le choix de région le plus protecteur (Québec) devrait être le défaut, pas une option payante. |
+| art. 8 | Information à la personne : finalités, moyens de collecte, **possibilité que les renseignements soient communiqués hors Québec** | Politique de confidentialité et contrats clients à mettre à jour, quelle que soit l'option. |
+| art. 10 | Mesures de sécurité raisonnables, proportionnées à la sensibilité | Chiffrement, isolation par client, contrôle d'accès. |
+| art. 12.1 | Décision fondée exclusivement sur un traitement automatisé : information et droit de faire valoir ses observations | Si le LLM prend des décisions sur des personnes (tri de candidatures, scoring), obligation d'informer. |
+| art. 17 | Communication hors Québec : ÉFVP tenant compte de la sensibilité, des finalités, des mesures de protection **et du régime juridique de l'État**; entente écrite; protection adéquate exigée | **L'article central pour la comparaison ci-dessous.** |
+| art. 27 et 28.1 | Droit d'accès, de rectification, **portabilité** (en vigueur depuis sept. 2024) et **cessation de diffusion / désindexation** | Le stockage doit permettre d'extraire et d'effacer un dossier complet, sauvegardes et index compris. |
+| art. 90.1 et s. | Sanctions administratives jusqu'à 10 M$ ou 2 % du chiffre d'affaires mondial; pénales jusqu'à 25 M$ ou 4 % | Le risque financier justifie de documenter chaque choix. |
+
+### 6.2 Les options de stockage face à la Loi 25
+
+Point de départ : **la Loi 25 n'interdit pas d'héberger hors Québec**. Elle
+exige une ÉFVP (art. 17) qui conclut à une protection adéquate, une entente
+écrite, et l'information des personnes (art. 8). Toronto, Montréal chez un
+fournisseur américain, et un fournisseur québécois n'ont donc pas le même
+poids dans l'ÉFVP.
+
+| Critère Loi 25 | DigitalOcean Toronto (`tor1`) | AWS Montréal (`ca-central-1`) | GitHub | Hébergeur québécois / serveur dédié au Québec |
+|---|---|---|---|---|
+| Données physiquement au Québec | ❌ Ontario | ✅ Québec | ❌ (aucun contrôle de région) | ✅ |
+| Communication « hors Québec » (art. 17) | Oui : ÉFVP obligatoire, entente écrite | **Débat.** Données au Québec, mais fournisseur soumis au droit américain (CLOUD Act). La CAI recommande d'évaluer le régime juridique du fournisseur, pas seulement l'emplacement. ÉFVP à faire quand même. | Oui, et sans pouvoir garantir le lieu | Non, si l'entreprise est québécoise et n'a pas de société mère étrangère |
+| Régime juridique étranger (CLOUD Act, FISA 702) | Exposé (société américaine) | Exposé (société américaine) | Exposé (Microsoft) | Non exposé |
+| Mesures de sécurité (art. 10) | Chiffrement au repos et en transit; BYOK limité | Chiffrement, KMS par client, BYOK complet, CloudTrail, conformité SOC 2 / ISO 27001 | Chiffrement, mais conçu pour du code, pas des données personnelles | Variable selon le fournisseur; à auditer |
+| Journalisation pour le registre d'incidents (art. 3.2) | Journaux Spaces limités | Complète (CloudTrail, S3 access logs) | Journal d'audit orienté code | Variable |
+| Effacement complet, sauvegardes incluses (art. 28.1) | Faisable : versioning Spaces à gérer | Faisable : versioning + cycle de vie S3 + suppression des sauvegardes | **Difficile** : l'historique Git conserve les données; réécriture d'historique et forks hors de contrôle | Faisable si prévu au contrat |
+| Portabilité (art. 27) | Export S3 standard | Export S3 standard | Export possible mais non structuré | Selon le fournisseur |
+| Entente écrite conforme (art. 17, 18.3) | DPA standard DigitalOcean | DPA AWS + addendum canadien | Conditions GitHub, non conçues pour des sous-traitants de données personnelles | Contrat négociable, sur mesure |
+| Confidentialité par défaut (art. 3.5) | Défaut acceptable | Meilleur défaut disponible chez un hyperscaler | Ne peut pas être le défaut | Meilleur défaut absolu |
+| Verdict Loi 25 | **Acceptable** avec ÉFVP documentée. Bon niveau, région hors Québec. | **Recommandé** comme défaut : le meilleur compromis conformité / outils / coût. ÉFVP à documenter sur le point CLOUD Act. | **Non conforme** pour des cerveaux clients. Code seulement. | **Le plus fort** pour les clients à haute sensibilité (santé, juridique, public). Plus cher, moins d'outils. |
+
+Lecture pratique :
+
+- **Défaut pour tous les clients : AWS Montréal.** Données au Québec,
+  outillage complet pour l'art. 10 et l'art. 3.2, effacement maîtrisable.
+- **DigitalOcean Toronto** reste conforme pour les clients existants, à
+  condition que l'ÉFVP art. 17 soit faite et classée, et que les clients
+  soient informés (art. 8) que leurs données sont en Ontario.
+- **Sortir tout cerveau client de GitHub**, y compris de l'historique. Cette
+  action est prioritaire : c'est le seul emplacement actuel qui ne peut pas
+  être rendu conforme.
+- **Offrir un palier « hébergement québécois »** (fournisseur québécois ou
+  serveur dédié) pour les clients dont l'ÉFVP exclut un fournisseur soumis au
+  CLOUD Act. Pas besoin de le construire tout de suite; il faut pouvoir le
+  proposer.
+
+### 6.3 Les options de LLM face à la Loi 25
+
+Le LLM est un **sous-traitant qui lit les renseignements personnels** à chaque
+requête. Les mêmes articles s'appliquent, plus l'art. 12.1 si le modèle
+décide.
+
+| Critère Loi 25 | A. LLM entraîné de zéro | B. Modèle à poids ouverts hébergé chez nous (Canada / Québec) | C. API commerciale en région canadienne, zéro rétention (ex. Bedrock `ca-central-1`) | D. API commerciale grand public (hors Canada, rétention par défaut) |
+|---|---|---|---|---|
+| Communication hors Québec (art. 17) | Non | Non si hébergé au Québec; ÉFVP si à Toronto | Oui au sens large (fournisseur américain), même si l'inférence est à Montréal. ÉFVP requise. | Oui, ÉFVP requise et difficile à conclure favorablement |
+| Rétention des requêtes | Contrôlée | Contrôlée | Zéro ou courte, contractuelle | Souvent 30 jours ou plus; parfois utilisées pour l'entraînement |
+| Utilisation pour entraîner un autre modèle | Non | Non | Non (contrat commercial) | Possible selon les conditions |
+| Mesures de sécurité (art. 10) | À construire entièrement | À notre charge : correctifs, isolation, GPU | Fournisseur certifié + notre couche applicative | Fournisseur certifié, mais flux de données non maîtrisé |
+| ÉFVP art. 3.3 requise | Oui | Oui | Oui | Oui |
+| Effort et coût | Irréaliste | Élevé, récurrent | Faible | Faible |
+| Qualité des réponses | Faible | Bonne | Meilleure disponible | Meilleure disponible |
+| Verdict Loi 25 | Aucun avantage de conformité par rapport à B; coût prohibitif | **Le plus solide** : aucune communication à un tiers. Idéal pour les clients à haute sensibilité. | **Conforme et pragmatique** avec ÉFVP documentée et contrat sans entraînement / zéro rétention. Défaut recommandé. | À proscrire pour des cerveaux clients contenant des renseignements personnels. |
+
+### 6.4 Ce que la Loi 25 impose peu importe l'option choisie
+
+1. **Une ÉFVP par projet** : une pour la migration AWS, une pour le
+   déploiement du LLM, et une par client dont le cerveau contient des
+   renseignements sensibles. Conserver les ÉFVP : la CAI peut les demander.
+2. **Un registre par client** : où sont les données, chez qui, sous quel
+   contrat, dans quelle région, depuis quand.
+3. **Ententes écrites** avec chaque fournisseur (DO, AWS, fournisseur LLM),
+   contenant : finalités limitées, mesures de sécurité, notification
+   d'incident, destruction en fin de contrat, interdiction de sous-traiter
+   sans accord.
+4. **Information des personnes** (art. 8) : la politique de confidentialité
+   d'IA avec Ugo, et celle de chaque client utilisateur, doivent mentionner
+   l'hébergement hors Québec lorsqu'il a lieu.
+5. **Procédure d'effacement et de portabilité** testée, sauvegardes et index
+   vectoriel inclus.
+6. **Registre des incidents** et procédure de notification à la CAI.
+7. **Encadrement des décisions automatisées** (art. 12.1) si un cas d'usage
+   client s'y rapproche.
+
+### 6.5 Recommandation finale
+
+| Palier | Stockage | Inférence | Clientèle visée |
+|---|---|---|---|
+| Standard (défaut) | AWS Montréal, KMS par client | API commerciale en région canadienne, zéro rétention, contrat sans entraînement | PME générales |
+| Existant | DigitalOcean Toronto, ÉFVP classée | Idem | Clients déjà en place, migration proposée |
+| Souverain (premium) | Hébergeur québécois ou serveur dédié au Québec | Modèle à poids ouverts hébergé chez nous | Santé, juridique, secteur public, données très sensibles |
+
+GitHub : code et documentation uniquement, jamais de données clients.
+« Construire notre propre LLM » : remplacé par « modèle hébergé de façon
+privée » au palier souverain.
+
+---
+
 Sources à citer dans toute communication externe tirée de ce document :
 Commission d'accès à l'information du Québec (cai.gouv.qc.ca) pour la Loi 25;
 pages officielles de régions AWS et DigitalOcean pour la résidence des
