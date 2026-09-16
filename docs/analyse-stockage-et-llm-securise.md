@@ -273,6 +273,110 @@ privée » au palier souverain.
 
 ---
 
+## 7. Option Toronto (DigitalOcean) : mini-analyse de risque et mesures d'atténuation
+
+Objectif : montrer que l'hébergement à Toronto peut rester conforme à la
+Loi 25 si on documente les risques et qu'on les atténue. Cette section sert
+de canevas pour l'ÉFVP art. 17 exigée avant toute communication hors Québec.
+Elle se remplit une fois pour l'infrastructure, puis se réutilise par client
+en ajustant la sensibilité des données.
+
+### 7.1 Ce que l'art. 17 demande d'évaluer
+
+1. La **sensibilité** des renseignements.
+2. Les **finalités** de leur utilisation.
+3. Les **mesures de protection**, contractuelles et techniques.
+4. Le **régime juridique** de l'État où ils vont.
+
+Conclusion attendue : les renseignements bénéficient d'une protection
+« adéquate », c'est-à-dire équivalente aux principes de la loi québécoise.
+Pour l'Ontario, le point 4 est favorable : même pays, LPRPDE fédérale et
+Charte canadienne applicables, aucune loi ontarienne de surveillance
+comparable au CLOUD Act. Le risque résiduel vient du **fournisseur** (société
+américaine), pas du lieu.
+
+### 7.2 Registre des risques : Toronto
+
+Échelle : probabilité et impact de 1 (faible) à 3 (élevé). Score = P × I.
+
+| # | Risque | P | I | Score | Mesures d'atténuation | Résiduel |
+|---|---|---|---|---|---|---|
+| T1 | Accès par une autorité américaine via le fournisseur (CLOUD Act) | 1 | 3 | 3 | Chiffrement côté client (les clés restent chez IA avec Ugo, jamais chez DO); DO ne peut remettre que des données chiffrées. Clause contractuelle : notification de toute demande gouvernementale lorsque la loi le permet. | 1 × 3 = 3 → faible |
+| T2 | Données hors Québec sans que la personne concernée le sache (art. 8) | 2 | 2 | 4 | Mention explicite dans la politique de confidentialité et dans le contrat client; clause à répercuter dans la politique de chaque client envers ses propres clients. | 1 × 2 = 2 |
+| T3 | Incident de sécurité chez le fournisseur non détecté (art. 3.2) | 2 | 3 | 6 | Journaux d'accès exportés vers notre propre système; alertes sur accès anormal; abonnement aux avis de sécurité DO; registre des incidents tenu chez nous. | 1 × 3 = 3 |
+| T4 | Impossibilité d'effacer complètement (versioning, sauvegardes) (art. 28.1) | 2 | 2 | 4 | Politique de cycle de vie : versions et sauvegardes expirées automatiquement; procédure d'effacement écrite et testée deux fois par an; preuve d'effacement remise au client. | 1 × 2 = 2 |
+| T5 | Mélange de données entre clients | 1 | 3 | 3 | Un bucket par client, clé d'accès distincte, test automatisé d'isolation à chaque déploiement. | 1 × 3 = 3 |
+| T6 | Sous-traitant du fournisseur non couvert (art. 18.3) | 1 | 2 | 2 | Conserver le DPA DO et sa liste de sous-traitants; vérifier annuellement. | 1 × 2 = 2 |
+| T7 | Sauvegardes ou réplication vers une région hors Canada | 2 | 3 | 6 | Sauvegardes limitées à `tor1`; réplication inter-régions désactivée et vérifiée par script. | 1 × 3 = 3 |
+| T8 | Perte de disponibilité (une seule région) | 2 | 2 | 4 | Sauvegarde secondaire chiffrée dans une autre région **canadienne** (AWS Montréal), sous nos clés. | 1 × 2 = 2 |
+
+Risque global avant atténuation : **moyen** (deux risques à 6).
+Risque global après atténuation : **faible** (aucun score au-dessus de 3).
+Conclusion de l'ÉFVP : protection adéquate, hébergement à Toronto
+**acceptable** pour des données de sensibilité faible à moyenne.
+
+### 7.3 Seuil à ne pas franchir
+
+L'analyse ci-dessus **ne suffit pas** si le cerveau contient :
+
+- des renseignements de santé;
+- des données financières détaillées de personnes physiques;
+- des renseignements sur des mineurs;
+- des données d'un organisme public québécois (soumis à la Loi sur l'accès,
+  exigences plus strictes).
+
+Pour ces cas, la sensibilité (critère 1) passe à 3, le risque T1 remonte à
+3 × 3 = 9 même avec chiffrement, et l'option Toronto doit être écartée au
+profit du palier québécois (section 6.5).
+
+### 7.4 Comparaison du risque résiduel entre les options
+
+Mêmes mesures d'atténuation appliquées partout où c'est possible.
+
+| Risque | DO Toronto | AWS Montréal | Hébergeur québécois | GitHub |
+|---|---|---|---|---|
+| T1 Accès autorité étrangère | 3 (chiffrement côté client) | 3 (idem; le lieu n'y change rien) | **1** | 6 (pas de chiffrement côté client possible sur le flux normal) |
+| T2 Info aux personnes | 2 | **1** (données au Québec, mention plus simple) | **1** | 4 (lieu non garanti) |
+| T3 Détection d'incident | 3 | **2** (journaux natifs complets) | 2 à 3 selon fournisseur | 4 |
+| T4 Effacement complet | 2 | 2 | 2 | **6** (historique Git) |
+| T5 Isolation clients | 3 | 3 | 3 | 4 |
+| T6 Sous-traitants | 2 | 2 | 2 | 3 |
+| T7 Réplication hors Canada | 3 | 3 | **1** | 6 |
+| T8 Disponibilité | 2 | **1** (multi-AZ natif) | 3 | 2 |
+| **Total** | **20** | **17** | **15 à 16** | **35** |
+| Effort de mise en œuvre | Faible (déjà en place) | Moyen (migration) | Élevé (nouveau fournisseur, contrat sur mesure) | n/a |
+| Coût relatif | Bas | Moyen | Élevé | n/a |
+
+Lecture :
+
+- **Toronto atténué (20) et Montréal (17) sont proches.** L'écart vient de
+  la mention hors Québec (T2), des journaux (T3) et de la disponibilité (T8).
+  Rien de bloquant pour des données de sensibilité faible à moyenne.
+- **Le chiffrement côté client est la mesure qui compte le plus.** Elle
+  ramène T1 au même niveau à Toronto qu'à Montréal. Sans elle, Toronto et
+  Montréal restent tous deux exposés au CLOUD Act.
+- **Le palier québécois gagne sur T1 et T7**, au prix du coût et de l'effort.
+  Réservé aux cas de la section 7.3.
+- **GitHub est hors comparaison** : trois risques non atténuables.
+
+### 7.5 Décision proposée
+
+1. Garder Toronto pour les clients existants, avec les huit mesures de la
+   section 7.2 mises en place et l'ÉFVP classée au dossier.
+2. Faire de Montréal le défaut pour les nouveaux clients, parce que l'ÉFVP
+   est plus courte à défendre et que le message « vos données restent au
+   Québec » se vend.
+3. Proposer une migration Toronto → Montréal aux clients existants quand
+   l'adaptateur AWS sera prêt, sans obligation.
+4. Refuser Toronto et Montréal chez un fournisseur américain pour les
+   données de la section 7.3; offrir le palier québécois ou décliner.
+
+Mesures à réaliser cette semaine, peu importe la décision : chiffrement
+côté client, un bucket par client, export des journaux, désactivation de la
+réplication hors Canada, mise à jour de la politique de confidentialité.
+
+---
+
 Sources à citer dans toute communication externe tirée de ce document :
 Commission d'accès à l'information du Québec (cai.gouv.qc.ca) pour la Loi 25;
 pages officielles de régions AWS et DigitalOcean pour la résidence des
